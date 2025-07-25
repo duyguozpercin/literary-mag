@@ -44,7 +44,7 @@ export default function SpeechGrid() {
         </motion.div>
 
         {/* Sabit kutu */}
-        <div className="w-full bg-blue-600 text-white p-6 rounded-lg shadow-md">
+        <div className="w-full bg-rose-200 text-black p-6 rounded-lg shadow-md">
           Bu birinci cümledir. Bu ikinci cümledir. Bu üçüncü cümledir. Bu dördüncü cümledir.
           Bu beşinci cümledir. Bu altıncı cümledir. Bu yedinci cümledir. Bu sekizinci cümledir.
           Bu dokuzuncu cümledir. Bu onuncu cümledir.
