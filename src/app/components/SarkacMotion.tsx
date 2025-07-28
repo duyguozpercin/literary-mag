@@ -32,7 +32,7 @@ export default function SpeechGrid() {
             },
             opacity: { duration: 0.8 },
             rotate: {
-              duration: 1.5,    // sallanma süresi
+              duration: 1.5,   
               ease: "easeInOut",
             },
           }}
