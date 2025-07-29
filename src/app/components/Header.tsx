@@ -1,10 +1,20 @@
-
+"use client";
+import MobileMenu from './MobileMenu';
+import {useState} from 'react';
 
 export default function Header() {
+
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  
   return (
     <header>
+      
       <div className="top-bar flex justify-between items-center py-2 px-6 text-sm uppercase tracking-wide border-b" >
-        <div className="social-icons flex gap-4 items-center">
+        <div className="social-icons hidden md:flex gap-4 items-center md:gap-6">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" className="bi bi-twitter-x" viewBox="0 0 16 16">
             <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
           </svg>
@@ -18,11 +28,24 @@ export default function Header() {
           </svg>
 
         </div>
-        <div className="search"></div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-list md:hidden" onClick={toggleMenu} viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+</svg>
+        <div className="site-title flex justify-center items-center py-4 text-3xl tracking-wider uppercase font-serif">Literary Mag</div>
+
+        <div className="search md:flex md:items-center sm:flex hidden" >
+          <input type="text" placeholder="Search..." className="w-64 h-8 text-xs px-3 py-1 border rounded" />
+        </div>
       </div>
-      <div className="site-title flex justify-center items-center py-4 text-3xl tracking-wider uppercase font-serif"></div>
       <div className="nav-bar flex justify-center gap-6 py-3 px-4 text-sm uppercase tracking-wide border-b"></div>
 
+      {isMenuOpen && (
+        <MobileMenu 
+          isOpen={isMenuOpen}
+          onClose={() => setIsMenuOpen(false)}
+        />
+      )}
     </header>
   )
 }
