@@ -10,20 +10,4 @@ body {
 
 /* styles/globals.css */
 
-.speech-bubble {
-  position: relative;
-  background: #edf2f7;           /* açık gri ton */
-  border-radius: 0.75rem;        /* rounded-lg */
-  padding: 1rem;
-}
 
-/* Kuyruk kısmı */
-.speech-bubble::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;                 /* baloncuk altına yapışık */
-  left: 1.25rem;                 /* baloncuğun solundan 20px kadar */
-  border-width: 10px;
-  border-style: solid;
-  border-color: #edf2f7 transparent transparent transparent;
-}
