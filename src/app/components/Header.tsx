@@ -39,7 +39,13 @@ export default function Header() {
           <input type="text" placeholder="Search..." className="w-64 h-8 text-xs px-3 py-1 border rounded" />
         </div>
       </div>
-      <div className="nav-bar flex justify-center gap-6 py-3 px-4 text-sm uppercase tracking-wide border-b"></div>
+      <div className="nav-bar flex justify-center gap-6 py-3 px-4 text-sm tracking-wide border-b">
+        <a href="#" className="hover:text-blue-500">Kitap</a>
+        <a href="#" className="hover:text-blue-500">Haberler</a>
+        <a href="#" className="hover:text-blue-500">Sanat</a>
+        <a href="#" className="hover:text-blue-500">Hakkımızda</a>
+        <a href="#" className="hover:text-blue-500">Giriş</a>
+      </div>
 
       {isMenuOpen && (
         <MobileMenu 
